@@ -11,7 +11,8 @@ export default function App() {
 
   return (
     <>
-      <Navbar setPage={setPage} />
+      {/* ✅ Pass currentPage */}
+      <Navbar setPage={setPage} currentPage={page} />
 
       {page === "home" && <Home setPage={setPage} />}
       

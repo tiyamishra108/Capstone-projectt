@@ -1,12 +1,35 @@
-export default function Navbar({ setPage }) {
+import "./Navbar.css";
+
+export default function Navbar({ setPage, currentPage }) {
   return (
-    <div className="navbar">
-      <h2>HealthCare+</h2>
-      <div>
-        <button onClick={() => setPage("home")}>Home</button>
-        <button onClick={() => setPage("doctors")}>Doctors</button>
-        <button onClick={() => setPage("dashboard")}>Dashboard</button>
+    <nav className="navbar">
+      
+      {/* Logo */}
+      <h2 className="logo">🏥 HealthCare+</h2>
+
+      {/* Navigation */}
+      <div className="nav-links">
+        <button
+          className={currentPage === "home" ? "active" : ""}
+          onClick={() => setPage("home")}
+        >
+          Home
+        </button>
+
+        <button
+          className={currentPage === "doctors" ? "active" : ""}
+          onClick={() => setPage("doctors")}
+        >
+          Doctors
+        </button>
+
+        <button
+          className={currentPage === "dashboard" ? "active" : ""}
+          onClick={() => setPage("dashboard")}
+        >
+          Dashboard
+        </button>
       </div>
-    </div>
+    </nav>
   );
 }

@@ -1,20 +1,31 @@
+import { useEffect, useState } from "react";
+import "./Dashboard.css";
+
 export default function Dashboard() {
-  const bookings = JSON.parse(localStorage.getItem("appointments")) || [];
+  const [appointments, setAppointments] = useState([]);
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("appointments")) || [];
+    setAppointments(data);
+  }, []);
 
   return (
-    <div className="container">
-      <h2>Your Appointments</h2>
+    <div className="dashboard">
+      <h1>📊 Dashboard</h1>
 
-      {bookings.length === 0 ? (
-        <p>No appointments yet</p>
+      {appointments.length === 0 ? (
+        <p className="empty">No appointments booked yet.</p>
       ) : (
-        bookings.map((b, i) => (
-          <div key={i} className="card">
-            <p><strong>{b.name}</strong></p>
-            <p>{b.specialty}</p>
-            <p>{b.date}</p>
-          </div>
-        ))
+        <div className="grid">
+          {appointments.map((item, index) => (
+            <div key={index} className="card dashboard-card">
+              <h3>{item.name}</h3>
+              <p>{item.specialty}</p>
+              <p>📅 {item.date || "N/A"}</p>
+              <p>⏰ {item.time || "N/A"}</p>
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );

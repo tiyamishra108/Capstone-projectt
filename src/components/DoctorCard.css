@@ -1,0 +1,109 @@
+/* CARD BASE */
+.card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* Glow effect (SAFE - no click blocking) */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(37,99,235,0.15), transparent 60%);
+  opacity: 0;
+  transition: 0.4s;
+  pointer-events: none; /* 🔥 FIX */
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* HEADER */
+.doctor-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* IMAGE */
+.doctor-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+}
+
+/* TEXT */
+.doctor-header h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.specialty {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* INFO SECTION */
+.doctor-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* FOOTER */
+.doctor-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.fee {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.availability {
+  font-size: 13px;
+  color: #16a34a;
+}
+
+/* BUTTON */
+.book-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  position: relative;
+  z-index: 5; /* 🔥 ensures click works */
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}

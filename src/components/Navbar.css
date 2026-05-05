@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(37, 99, 235, 0.9);
+  backdrop-filter: blur(10px);
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Links */
+.nav-links button {
+  margin-left: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Hover */
+.nav-links button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Active Page */
+.nav-links .active {
+  background: white;
+  color: #2563eb;
+}
