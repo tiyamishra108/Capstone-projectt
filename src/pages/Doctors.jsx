@@ -4,7 +4,7 @@ import { doctors } from "../data/doctors";
 export default function Doctors({ setPage, setSelectedDoctor }) {
 
   const handleSelect = (doctor) => {
-    console.log("CLICK WORKING:", doctor); // 👈 MUST PRINT
+    console.log("CLICK WORKING:", doctor);
     setSelectedDoctor(doctor);
     setPage("booking");
   };
@@ -15,7 +15,7 @@ export default function Doctors({ setPage, setSelectedDoctor }) {
         <DoctorCard
           key={doc.id}
           doc={doc}
-          onSelect={handleSelect}   // ✅ CRITICAL LINE
+          onSelect={handleSelect}   
         />
       ))}
     </div>
