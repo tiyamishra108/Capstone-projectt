@@ -7,7 +7,6 @@
   overflow: hidden;
 }
 
-/* Glow effects */
 .dashboard::before,
 .dashboard::after {
   content: "";
@@ -31,25 +30,21 @@
   right: -80px;
 }
 
-/* Heading */
 .dashboard h1 {
   margin-bottom: 20px;
 }
 
-/* Empty text */
 .empty {
   color: #64748b;
   font-size: 18px;
 }
 
-/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* Cards */
 .dashboard-card {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);

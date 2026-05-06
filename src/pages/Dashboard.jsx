@@ -21,8 +21,8 @@ export default function Dashboard() {
             <div key={index} className="card dashboard-card">
               <h3>{item.name}</h3>
               <p>{item.specialty}</p>
-              <p>📅 {item.date || "N/A"}</p>
-              <p>⏰ {item.time || "N/A"}</p>
+              <p> {item.date || "N/A"}</p>
+              <p>{item.time || "N/A"}</p>
             </div>
           ))}
         </div>

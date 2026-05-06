@@ -9,14 +9,12 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo */
 .logo {
   margin: 0;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
-/* Links */
 .nav-links button {
   margin-left: 12px;
   padding: 8px 16px;
@@ -29,12 +27,10 @@
   font-weight: 500;
 }
 
-/* Hover */
 .nav-links button:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Active Page */
 .nav-links .active {
   background: white;
   color: #2563eb;

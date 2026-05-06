@@ -1,4 +1,3 @@
-/* MAIN BACKGROUND */
 .home {
   min-height: 100vh;
   display: flex;
@@ -14,7 +13,6 @@
   overflow: hidden;
 }
 
-/* FLOATING GLOW BLOBS */
 .home::before,
 .home::after {
   content: "";
@@ -39,7 +37,6 @@
   right: -100px;
 }
 
-/* GLASS CONTAINER */
 .home-content {
   position: relative;
   z-index: 1;
@@ -54,7 +51,6 @@
   animation: fadeUp 0.8s ease;
 }
 
-/* TITLE */
 .home-content h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -65,7 +61,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* SUBTEXT */
 .home-content p {
   font-size: 1.1rem;
   color: #475569;
@@ -73,7 +68,6 @@
   margin-bottom: 30px;
 }
 
-/* BUTTON */
 .home-btn {
   padding: 14px 30px;
   border-radius: 12px;
@@ -91,7 +85,6 @@
   box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
 }
 
-/* ANIMATION */
 @keyframes fadeUp {
   from {
     opacity: 0;
